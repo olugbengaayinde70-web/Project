@@ -1,0 +1,5 @@
+@import "tailwindcss";
+.yopp {
+    background-image: url(better.jpg);
+    background-size: cover;
+}
