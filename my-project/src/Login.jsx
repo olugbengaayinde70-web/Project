@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from "react";
+import React, { useMemo, useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 function validateEmail(email) {
@@ -7,6 +7,18 @@ function validateEmail(email) {
 
 export default function Login() {
   const navigate = useNavigate();
+  useEffect(() => {
+    try {
+      const raw = localStorage.getItem("demoAuth");
+      const auth = raw ? JSON.parse(raw) : null;
+      if (auth?.role) {
+        if (auth.role === "admin") navigate("/admin");
+        else navigate("/app");
+      }
+    } catch {
+      // ignore
+    }
+  }, [navigate]);
   const [role, setRole] = useState("user");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,7 +49,7 @@ export default function Login() {
     localStorage.setItem("demoAuth", JSON.stringify(payload));
 
     if (role === "admin") navigate("/admin");
-    else navigate("/app");
+    else navigate("/#hero");
   };
 
   return (

@@ -9,7 +9,7 @@ export default function Track() {
             <div>
               <p className="text-sm font-semibold tracking-wide text-orange-600">Track your order</p>
               <h2 className="mt-2 text-3xl md:text-4xl font-extrabold text-gray-900">Get live delivery updates</h2>
-              <p className="mt-2 text-gray-500 max-w-xl">Enter an order reference to see current status. (Demo UI)</p>
+              <p className="mt-2 text-gray-500 max-w-xl">Enter an order reference to see current status.</p>
             </div>
 
             <div className="w-full sm:w-auto">

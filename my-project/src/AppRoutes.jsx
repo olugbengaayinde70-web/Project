@@ -1,6 +1,7 @@
 import React from "react";
 import { Routes, Route, Navigate } from "react-router-dom";
 import Hero from "./Hero";
+import Landing from "./Landing";
 import Menu from "./Menu";
 import Cart from "./Cart";
 import Track from "./Track";
@@ -100,6 +101,7 @@ export default function AppRoutes() {
   return (
     <Routes>
       <Route path="/login" element={<Login />} />
+      <Route path="/" element={<Landing />} />
       <Route
         path="/app"
         element={
@@ -117,8 +119,7 @@ export default function AppRoutes() {
         }
       />
 
-      <Route path="/" element={<Navigate to="/login" replace />} />
-      <Route path="*" element={<Navigate to="/login" replace />} />
+      <Route path="*" element={<Navigate to="/" replace />} />
     </Routes>
   );
 }

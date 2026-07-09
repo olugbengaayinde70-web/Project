@@ -106,7 +106,7 @@ export default function FoodDeliveryHero() {
   };
 
   return (
-    <div className="min-h-screen bg-linear-to-b from-orange-50 via-amber-50 to-white overflow-hidden relative font-sans yopp">
+    <div id="hero" className="min-h-screen bg-linear-to-b from-orange-50 via-amber-50 to-white overflow-hidden relative font-sans yopp">
       <div className="absolute -top-24 -left-16 w-96 h-96 rounded-full bg-orange-400 opacity-20 blur-3xl pointer-events-none" />
       <div className="absolute -bottom-20 -right-10 w-80 h-80 rounded-full bg-pink-400 opacity-20 blur-3xl pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 w-48 h-48 rounded-full bg-yellow-300 opacity-25 blur-2xl pointer-events-none" />
